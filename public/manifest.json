@@ -1,0 +1,92 @@
+{
+  "name": "NeuroTravel - Accessible Travel Planning",
+  "short_name": "NeuroTravel",
+  "description": "AI-powered travel planning designed for neurodivergent individuals with safety and accessibility at the core.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["travel", "accessibility", "health", "productivity"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "NeuroTravel dashboard on desktop"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "NeuroTravel mobile interface"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/neurotravel_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/neurotravel_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Plan Trip",
+      "short_name": "Plan",
+      "description": "Start planning a new accessible trip",
+      "url": "/trip-planning",
+      "icons": [
+        {
+          "src": "/neurotravel_icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "AI Companion",
+      "short_name": "AI Help",
+      "description": "Get immediate assistance from your AI companion",
+      "url": "/ai-companion",
+      "icons": [
+        {
+          "src": "/neurotravel_icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Emergency Kit",
+      "short_name": "Emergency",
+      "description": "Access crisis support and emergency resources",
+      "url": "/emergency-kit",
+      "icons": [
+        {
+          "src": "/neurotravel_icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+neurotravel",
+      "url": "/handle-protocol?url=%s"
+    }
+  ]
+}
