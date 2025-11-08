@@ -1,0 +1,130 @@
+/* Theme Variables */
+:root {
+  --motion-duration: 0.2s;
+}
+
+/* Base styles */
+.App {
+  text-align: left;
+}
+
+/* Light Theme */
+.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-accent: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bg-primary: #1e293b;
+  --bg-secondary: #334155;
+  --bg-accent: #475569;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #475569;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* High Contrast Theme */
+.theme-high-contrast {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f0f0;
+  --bg-accent: #e0e0e0;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --border-color: #000000;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* Warm Theme */
+.theme-warm {
+  --bg-primary: #fef7ed;
+  --bg-secondary: #fed7aa;
+  --bg-accent: #fdba74;
+  --text-primary: #9a3412;
+  --text-secondary: #c2410c;
+  --border-color: #fed7aa;
+  --shadow: 0 4px 6px -1px rgba(251, 146, 60, 0.2);
+}
+
+/* Cool Theme */
+.theme-cool {
+  --bg-primary: #f0fdfa;
+  --bg-secondary: #a7f3d0;
+  --bg-accent: #6ee7b7;
+  --text-primary: #134e4a;
+  --text-secondary: #047857;
+  --border-color: #a7f3d0;
+  --shadow: 0 4px 6px -1px rgba(52, 211, 153, 0.2);
+}
+
+/* Motion Reduction */
+.motion-reduce,
+.motion-reduce *,
+.motion-reduce *:before,
+.motion-reduce *:after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.theme-high-contrast *:focus {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+}
+
+/* Utility classes for sensory considerations */
+.low-motion {
+  animation: none !important;
+  transition: none !important;
+}
+
+.high-contrast-border {
+  border: 2px solid var(--text-primary) !important;
+}
+
+.calm-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
