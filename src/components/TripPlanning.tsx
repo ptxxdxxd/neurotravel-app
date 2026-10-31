@@ -1124,7 +1124,7 @@ export default function TripPlanning() {
         {/* Progress Indicator */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
-            {[1, 2, 3, 4, 5].map((step) => (
+            {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
               <div 
                 key={step}
                 className={`flex items-center justify-center w-10 h-10 rounded-full ${
