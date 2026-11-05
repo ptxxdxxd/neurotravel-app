@@ -1,0 +1,28 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        # No lockfile is committed yet, so versions resolve fresh each run.
+        run: pnpm install --no-frozen-lockfile
+      - name: Type check
+        run: pnpm exec tsc -b
+      - name: Build
+        run: pnpm exec vite build --outDir ci-dist

@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# Logs and caches
+*.log
+npm-debug.log*
+pnpm-debug.log*
+node_modules/.vite/
+.vite/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Note: dist/ is committed on purpose for now, because vercel.json deploys the
+# prebuilt dist/ folder. Ignore it here only after switching Vercel to build
+# from source.

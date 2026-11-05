@@ -1,3 +1,5 @@
+> **Note:** this document describes the full product vision for NeuroTravel. Many features here, including the AI companion, are planned and not built yet. See the [README](README.md) for what the app does today.
+
 # NeuroTravel: The World's First AI-Powered Travel App Built For Neurodivergent Travelers
 
 ## 🎯 **Mission Statement**
