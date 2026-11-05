@@ -1,5 +1,7 @@
 # NeuroTravel
 
+[![build](https://github.com/ptxxdxxd/neurotravel-app/actions/workflows/build.yml/badge.svg)](https://github.com/ptxxdxxd/neurotravel-app/actions/workflows/build.yml)
+
 A trip planner built for neurodivergent travelers. NeuroTravel walks you through planning a trip around sensory, accessibility and safety needs, and saves each plan to your account.
 
 > **Status:** early prototype. Trip planning, accounts and accessibility settings work. The AI companion, emergency kit and profile editor are placeholders in the dashboard and are not built yet. See [What's built](#whats-built) for the details.
@@ -63,6 +65,8 @@ pnpm build
 ```
 
 The output goes to `dist/`. The current Vercel config (`vercel.json`) deploys the committed `dist/` folder as static files, so rebuild and commit `dist/` after changing the source.
+
+GitHub Actions type-checks and builds every pull request (`.github/workflows/build.yml`). It builds into a scratch folder, so it checks that the source compiles but doesn't refresh the committed `dist/`. There are no automated tests yet.
 
 ## Project layout
 
